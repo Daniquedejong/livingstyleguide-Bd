@@ -1,1 +1,1 @@
-# livingstyleguide-badr-danique
+# livingstyleguide
