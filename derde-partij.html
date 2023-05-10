@@ -88,7 +88,7 @@
   <li class="list">
   <a href="/derde-partij.html">
   <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
-  <span class="title">Derde partij</span>
+  <span class="title">Performance audit</span>
   </a>
   </li>
   
@@ -174,44 +174,68 @@
   <img src="./img/patroon.png" alt="patroon" class="img-patroon"></img>
 
 
-<!-- Hier komt je tekst in-->
-<!-- Title H1 -->
-<h1>Derde Partij</h1>
+<h1>Performance audit</h1>
 
-<!-- Broodtekst -->
-<p>De derde partijen kunnen het bedrijf helpen om bepaalde functies te maken zoals een sruvey, deze gebruik je bijvoorbeeld ook bij keurmerken.</p>
+<p>Wij hebben samen een website gemaakt voor Vini Mini. 
+  Na het maken van de website is het belangrijk dat hij goed werkt. Hiervoor testen we de website.
+   We hebben een performance audit test gedaan. Hierbij hebben wij gekeken naar twee onderdelen.
+  Lazy loading en layout shifts. Hierbij hebben we een paar tests gedaan.</p>
 
-<!-- Kleur -->
-<h2>Hotjar survey:</h2>
-<p>Hotjar wordt gebruikt om een survey te volgen op de originele website van Vini Mini, in deze survey kan je beantwoorden hoe je terecht bent gekomen op de website.</p>
+<h2>Checklist nummer 46 - Lazy loading</h2>
 
-<img style="margin-top: 15px;" src="./img/hotjar.png" alt="logo-kleuren" class="logo-img-1"></img>
+<p>Lazy loading is een handige tool om ervoor te zorgen dat images sneller inladen. 
+  Hiermee zorg je ervoor dat als je op een website klikt, dat de foto's die je ziet niet lang hoeven te laden.
+  Als images wel lang laden op een site is de kans groter dat de gebruiker afhaakt en de site verlaat.
+  Wij wilden dit natuurlijk niet, dus hebben we lazy loading toegepast op de images van onze website. Dit doe je door -loading: lazy- achter een image te zetten.
+  Hierna zijn we gaan testen. Op de <a href="https://www.smashingmagazine.com/2021/01/front-end-performance-2021-free-pdf-checklist/">checklist</a>
+   site stond veel informatie hierover. Deze site 
+verwees ons ook weer door naar <a href="https://css-tricks.com/the-complete-guide-to-lazy-loading-images/#aa-chapter-7-testing-lazy-load">ccs tricks</a>
+, waarop ze duidelijk lieten zien hoe je dit kon testen.</p>
+<br>
+<h3>Network - Images</h3>
+<p>We hebben de profielpagina getest en dit zijn de uitkomsten.</p>
+<img src="img/Schermafbeelding 2023-05-10 112321.png" alt="lazy-loading-test1" width="900" height="150">
+<img src="img/Schermafbeelding 2023-05-10 112345.png" alt="lazy-loading-test2" width="1050" height="150">
+<p>De uitkomst is dus dat de eerste foto begint met laden vanaf 6 ms en de laatste foto vanaf 9 ms. 
+  De content download van de eerste foto begint bij 0.77 ms en de laatste foto 1.12 ms.
+  Dit is dus best snel. Deze uitkomst kan je goed zien in de volgende foto's. 
+</p>
 
-<!-- Kop tekst -->
-<h2>Typeform Formulier:</h2>
-<p>Op de orginele website word een Typeform formulier gebruikt om een test aftenemen waarin je naar een bepaald aantal vragen advies krijgt over wat je moet doen.</p>
+<img src="img/Schermafbeelding 2023-05-10 112436.png" alt="lazy-loading-test3" width="500" height="400">
+<img src="img/Schermafbeelding 2023-05-10 112446.png" alt="lazy-loading-test4" width="500" height="400">
 
-<img style="margin-top: 15px;" src="./img/typeform.png" alt="logo-kleuren" class="logo-img-1"></img>
-
-<h2>Eit Food:</h2>
-<p>Eit Food is een voorbeeld van een keurmerk wat gebruikt word op de website van Vini Mini. Als je dit logo gebruikt moet je er altijd voor zorgen dat de tekst erin duidelijk leesbaar is. </p>
-
-<img style="margin-top: 15px;" src="./img/eitfood.png" alt="logo-kleuren" class="logo-img-1"></img>
+<p>Verder hebben we ook nog de productenpagina getest. Dit zijn de uitkomsten.</p>
+<img src="img/Schermafbeelding 2023-05-10 120933.png" width="1050" height="150">
+<p>Dat zijn dus ook prima resultaten.</p>
 
 
-<h2>Don'ts:</h2>
 
-<ul>
-<li>Er mag nooit een ander programma dan Hotjar worden gebruikt om een survey te volgen.</li>
-<li>Op de orginele website mag er nooit een ander soort formulier gebruikt worden dan een Typeform formulier om een test aftenemen.</li>
-<li>Het Eit logo mag nooit onduidelijk te lezen zijn, anders mag dit niet worden gebruikt.</li>
-</ul>
+<h2>Checklist nummer 60 - Prevent layout shifts</h2>
+
+<p>Layout shifts zie je vaak en zijn erg vervelend. Wanneer je op een site komt en en een knop wil drukken kan er zomaar een verschuiving plaats vinden, 
+  waardoor je de knop weer terug moet vinden. Informatie hierover kan je ook vinden op de <a href="https://www.smashingmagazine.com/2021/01/front-end-performance-2021-free-pdf-checklist/">checklist</a> site.
+   Dit willen wij voorkomen. De gewenste CLS score zit tussen de 0 en 0,1. Wij hebben onze site getest en gekeken naar de uitkomsten en of we hier nog wat aan kunnen doen. 
+</p>
+<br>
+<h3>Lighthouse - Performance</h3>
+<p>We hebben ook hier de profielpagina getest en hier zijn de resultaten.</p>
+<img src="img/Schermafbeelding 2023-05-10 121617.png" alt="layout-shift-test1" width="500" height="400">
+<p>De uitkomst laat zien dat er niet veel mis is. Er staat dat geen layout shifts zijn op deze pagina. Als ik deze uitkomst uitklapte dan zag ik wel 
+  dat er nog aan iets gewerkt kon worden. Blijkbaar hebben we images zonder width en height. Deze uitkomst zie je hier.
+</p>
+<img src="img/Schermafbeelding 2023-05-10 121636.png" alt="layout-shift-test2" width="900" height="200">
+<p>Dit willen we dus aanpassen.</p>
+
+<p>Ook hebben we de productenpagina weer getest hiervoor. Hier zijn de resultaten.</p>
+<img src="img/Schermafbeelding 2023-05-10 123026.png" alt="layout-shift-test3" width="500" height="400">
+<p>Hier zie je dat er problemen zijn. De uitkomst zegt ons dat we een CLS score hebben van 0,152. Als ik de uitkomst uitklap, dan zien we waardoor dit komt.
+</p>
+<img src="img/Schermafbeelding 2023-05-10 123114.png" alt="layout-shift-test4" width="500" height="400">
+<p>Ook hier hebben veel images geen height en width. Dit zouden we dus moeten aanpassen.</p>
 
 </main>
 
 </body>
-
-
 
 </html>
 
